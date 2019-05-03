@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'multiply:results_count' %}">results_count</a><br>
+<a href="{% url 'multiply:results_num' %}">results_number</a><br>
+<ul>
+<table border="5" bordercolor="blue" width="100%" height="10%" bgcolor="yellow">
+    <tr>
+        <th><h1>NO.</h1></th>
+        <th><h1>Count</h1></th>
+  </tr>
+    {% for i in number_list %}
+    <tr align="center">
+        <td><h3>{{ i.number_text }}</h3></td>
+        <td> <h3>{{ i.count }}</h3> </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</ul>
+</body>
+</html>
